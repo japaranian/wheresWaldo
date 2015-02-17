@@ -14,7 +14,6 @@ class SessionController < ApplicationController
 		if user && user.authenticate(params["password"])
 			session[:user_id] = user.id
 			session[:user_name] = user.fname
-			binding.pry
 			redirect_to "/users/#{user.id}"
 		else
 			@error = true
