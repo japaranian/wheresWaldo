@@ -14,6 +14,5 @@ class MatchController < ApplicationController
 	def view
 		match = Match.find_by(id: params[:id])
 		@image = Image.find_by(id: match.image_id)
-		binding.pry
 	end
 end

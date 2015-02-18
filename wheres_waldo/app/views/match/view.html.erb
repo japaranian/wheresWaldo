@@ -3,6 +3,29 @@
 	<title></title>
 </head>
 <body>
-	<img src="<%=@image.img_url%>">
+	<style>
+		#lamp
+			{
+			  position:fixed;
+			  top:0px;
+			  left:0px;
+			  width:300px;
+			  height:300px;
+			  border-radius:150px;
+			  border-style:solid;
+			  border-color:white;
+			  
+			  background:inherit;
+			  
+			  box-shadow:1px 1px 12px white;
+			  
+			  background-image:url('<%=@image.img_url%>');
+			  background-size: cover;
+			  background-position:0% 30%;
+			  background-attachment : fixed; 
+			}
+	</style>
+
+	<div id="lamp"></div>
 </body>
 </html>
