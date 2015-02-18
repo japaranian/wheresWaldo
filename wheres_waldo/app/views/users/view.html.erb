@@ -3,7 +3,12 @@
 	<title></title>
 </head>
 <body>
-	Hello, <%=user.fname%>
+	<h1>Hello, <%=user.fname%></h1>
+
+	<h2><a href="/match">Play</a></h2>
+
+	<h3>Player Record</h3>
+
 
 	<form action="/session/destroy" method="POST">
         <input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
