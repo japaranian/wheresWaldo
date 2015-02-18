@@ -8,9 +8,6 @@ Rails.application.routes.draw do
   post '/users/create' => 'users#create'
   get '/users/:id' => 'users#view'
 
-  get '/match' => 'match#new'
-  get '/match/easy' => 'match#easy'
-  get '/match/intermediate' => 'match#intermediate'
-  get '/match/difficult' => 'match#difficult'
-
+  get '/users/:id/match' => 'match#new'
+  post '/match/new' => 'match#create'
 end

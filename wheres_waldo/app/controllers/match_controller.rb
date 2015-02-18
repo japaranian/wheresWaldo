@@ -4,16 +4,7 @@ class MatchController < ApplicationController
 		render(:new)
 	end
 
-	def easy
-		render(:easy)
+	def create
+		
 	end
-
-	def intermediate
-		render(:intermediate)
-	end
-
-	def difficult
-		render(:difficult)
-	end
-
 end

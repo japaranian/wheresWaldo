@@ -4,12 +4,14 @@
 </head>
 <body>
 	<h1>Choose a level!</h1>
-	<h2>
-		<ul>
-			<li><a href="match/easy">Easy</a></li>
-			<li><a href="match/intermediate">Intermediate</a></li>
-			<li><a href="match/difficult">Difficult</a></li>
-		</ul>
-	</h2>
+	<form action="/match/new" method="POST">
+	<input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+		<select>
+			<option value="easy">Easy</option>
+			<option value="intermediate">Intermediate</option>
+			<option value="difficult">Difficult</option>
+		</select>
+		<button>Play!</button>
+	</form>
 </body>
 </html>
