@@ -6,7 +6,7 @@
 	<h1>Choose a level!</h1>
 	<form action="/match/new" method="POST">
 	<input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
-		<select>
+		<select name="level">
 			<option value="easy">Easy</option>
 			<option value="intermediate">Intermediate</option>
 			<option value="difficult">Difficult</option>

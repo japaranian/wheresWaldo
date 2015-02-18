@@ -10,4 +10,5 @@ Rails.application.routes.draw do
 
   get '/users/:id/match' => 'match#new'
   post '/match/new' => 'match#create'
+  get '/users/:id/match/:id' => 'match#view'
 end

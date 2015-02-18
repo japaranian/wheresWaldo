@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+body
+{
+  padding:0px;
+  margin:0px;
+
+  cursor:crosshair; /* Nous enlevons le curseur */
+  background-color:black;
+}
+
+#mask
+{
+  width:100vw;
+  height:100vh;
+}
+
+#lamp
+{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:300px;
+  height:300px;
+  border-radius:150px;
+  border-style:solid;
+  border-color:white;
+  
+  background:inherit;
+  
+  box-shadow:1px 1px 12px white;
+  
+  background-image:url('http://i.imgur.com/OTfytjA.jpg');
+  background-size: cover;
+  background-position:0% 30%;
+  background-attachment : fixed;
+  
+}
