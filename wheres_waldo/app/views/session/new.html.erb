@@ -3,26 +3,31 @@
 	<title>Where's Waldo?</title>
 </head>
 <body>
-	<h1>Where's Waldo? with Friends</h1>
-
-	<% if @error %>
-	<h1 style='color:red;'>Incorrect email and/or password</h1>
-	<% end %>
-
-	<div class="login">
-    	<form method='POST' action='/session/create'>
-	    	<input class='inputbox' type="text" name="email" placeholder="Email" required="required" />
-	        <input class='inputbox' type="password" name="password" placeholder="Password" required="required" />
-	        <input name='authenticity_token' value='<%= form_authenticity_token() %>' type='hidden'>
-	        <button type="submit" id="loginbutton">Log In</button>
-    	</form>
+	<div id="background">
+		<img src="http://www.bkom.com/medias/img/clients/waldo/Splash_01.jpg">
 	</div>
 
-	<form method='GET' action='/users/new'>
-  	<button id='signup'>New User?</button>			
-	</form>
+	<div id="loginform">
+		<center>
+			<% if @error %>
+			<h1 style='color:red;'>Incorrect email and/or password</h1>
+			<% end %>
 
-	</center>
-</div>
+
+			<div class="login">
+		    	<form method='POST' action='/session/create'>
+			    	<input class='inputbox' type="text" name="email" placeholder="Email" required="required" /><br>
+			        <input class='inputbox' type="password" name="password" placeholder="Password" required="required" /><br>
+			        <input name='authenticity_token' value='<%= form_authenticity_token() %>' type='hidden'>
+			        <button type="submit" id="loginbutton">Log In</button><br><br><br>
+		    	</form>
+			</div>
+
+			<form method='GET' action='/users/new'>
+		  	<button id='signup'>New User?</button>			
+			</form>
+
+		</center>
+	</div>
 </body>
 </html>

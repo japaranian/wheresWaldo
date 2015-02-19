@@ -14,3 +14,86 @@
  *= require_self
  */
 
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+body {
+	background-color: transparent;
+	font-family: 'Roboto';
+	color: #000000;
+	margin-left: 10px;
+	margin-right: 0px;
+	margin-top: 0px
+}
+
+#background {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+}
+
+#background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;}
+
+#login {
+	height: 600px;
+	width: 370px;
+	margin-left: auto;
+	margin-right: auto;
+	top: 50%;
+}
+
+#loginform{
+	background-color: transparent;
+	position: absolute;
+	top: 250px;
+	left: 300px;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.inputbox { 
+	border: none;
+	outline: none;
+	width: 350px; 
+	margin-bottom: 10px; 
+	padding: 10px;
+	font-size: 13px;
+	border: 3px solid rgb(0,0,0);
+	background: rgb(255,255,255);
+	border-radius: 10px;
+}
+
+button {
+	background-color:#ffffff;
+	-moz-border-radius:22px;
+	-webkit-border-radius:22px;
+	border-radius:22px;
+	border:3px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Roboto;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 23px;
+	text-decoration:none;
+}
+button:hover {
+	color:red;
+	border-color: #000000;
+}
+button:active {
+	position:relative;
+	top:1px;
+}

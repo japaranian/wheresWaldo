@@ -2,6 +2,17 @@ console.log('Main.js loaded!');
 
 $(function(){
 
+	// var seconds = 0;
+	// var timerId;
+	// var $timer = $('#timer');
+
+	// function updateTime(){
+	// 	seconds++;
+	// 	timer.innerText = 'Time Elapsed' + seconds;
+	// }
+
+
+
 	$(function(){
 		var pageX;
 		var pageY;
@@ -22,7 +33,7 @@ $(function(){
 		console.log(event.pageX, event.pageY);
 		var x_coord = $('#coordinates').text().split(" ")[0];
 		var y_coord = $('#coordinates').text().split(" ")[1];
-		if(event.pageX > x_coord - 10 && event.pageX < x_coord + 10 && event.pageY > y_coord - 10 && event.pageY < y_coord + 10){
+		if(event.pageX > x_coord - 10 && event.pageX < x_coord + 10 && event.pageY > y_coord - 15 && event.pageY < y_coord + 15){
 			expand();
 		}
 	});
