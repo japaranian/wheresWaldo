@@ -2,8 +2,22 @@
 <head>
 	<title></title>
 </head>
-<body>
+<body></body>>
 	<style>
+		body
+			{
+			  padding:0px;
+			  margin:0px;
+
+			  cursor:crosshair;
+			  background-color: black;
+			}
+
+		#mask
+			{
+			  width:100vw;
+			  height:100vh;
+			}
 		#lamp
 			{
 			  position:fixed;
@@ -22,10 +36,12 @@
 			  background-image:url('<%=@image.img_url%>');
 			  background-size: cover;
 			  background-position:0% 30%;
-			  background-attachment : fixed; 
+			  background-attachment: fixed; 
 			}
+
 	</style>
 
 	<div id="lamp"></div>
+
 </body>
 </html>

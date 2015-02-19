@@ -14,17 +14,3 @@
  *= require_self
  */
 
-body
-	{
-	  padding:0px;
-	  margin:0px;
-
-	  cursor:crosshair; /* Nous enlevons le curseur */
-	  background-color:black;
-	}
-
-#mask
-	{
-	  width:100vw;
-	  height:100vh;
-	}
