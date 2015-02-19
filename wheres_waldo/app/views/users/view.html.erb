@@ -3,17 +3,41 @@
 	<title></title>
 </head>
 <body>
-	<h1>Hello, <%=user.fname%></h1>
 
+	<div id="header">
+		<table width=100% height=100%>
+			<tr>
+				<td width=20 align="right">
+				</td>
+				<td width=50%>
+					<a href='/users/<%=user.id%>'>Hello, <%=user.fname%></a>
+
+				
+				</td>
+				<td width=0% align="right">
+					
+				<form action="/session/destroy" method="POST">
+			        <input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+			        <input type="hidden" name="_method" value="DELETE" />
+			        <button>Log Out</button>
+			    </form>
+
+				</td>
+				<td width=20 align="right">
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id='userinfo'>
+	
 	<h2><a href="/users/<%=user.id%>/match">Play</a></h2>
 
 	<h3>Player Record</h3>
 
+	</div>
 
-	<form action="/session/destroy" method="POST">
-        <input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
-        <input type="hidden" name="_method" value="DELETE" />
-        <button>Log Out</button>
-    </form>
+
+
 </body>
 </html>

@@ -11,6 +11,7 @@ class MatchController < ApplicationController
 	# Pusher.logger = Rails.logger
 
 	def new
+		@user = User.find_by(id: params[:id])
 		render(:new)
 	end
 
@@ -18,6 +19,7 @@ class MatchController < ApplicationController
 		image = Image.find_by(level: params["level"])
 		match = Match.new(player_one: session[:user_id], level: params["level"], image_id: image.id)
 		match.save
+
 		redirect_to "/users/#{session[:user_id]}/match/#{match.id}"
 	end
 
