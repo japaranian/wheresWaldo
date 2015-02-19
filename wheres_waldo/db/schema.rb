@@ -11,14 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150218192446) do
+ActiveRecord::Schema.define(version: 20150219002440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "images", force: :cascade do |t|
-    t.text   "img_url"
-    t.string "level"
+    t.text    "img_url"
+    t.string  "level"
+    t.integer "xcoordinate"
+    t.integer "ycoordinate"
   end
 
   create_table "matches", force: :cascade do |t|
@@ -28,8 +30,6 @@ ActiveRecord::Schema.define(version: 20150218192446) do
     t.integer  "player_one"
     t.integer  "player_two"
     t.string   "level"
-    t.integer  "xcoordinate"
-    t.integer  "ycoordinate"
   end
 
   create_table "users", force: :cascade do |t|

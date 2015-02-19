@@ -17,7 +17,6 @@ class UsersController < ApplicationController
 		new_user = User.new({ fname: params["fname"], lname: params["lname"], email: params["email"], password: params[:password]})
 		new_user.save
 		session[:user_id] = new_user.id
-		binding.pry
 		redirect_to "/users/#{new_user.id}"
 	end
 
