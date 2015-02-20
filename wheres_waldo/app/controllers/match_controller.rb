@@ -25,6 +25,7 @@ class MatchController < ApplicationController
 
 	def view
 		match = Match.find_by(id: params[:id])
+		@user = User.find_by(id: match.player_one)
 		@image = Image.find_by(id: match.image_id)
 	end
 

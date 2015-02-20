@@ -1,54 +1,53 @@
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<style>
-		body
-			{
-			  padding:0px;
-			  margin:0px;
+<style>
+	body
+		{
+		  padding:0px;
+		  margin:0px;
 
-			  cursor:crosshair;
-			  background-color: black;
-			}
+		  cursor:crosshair;
+		  background-color: black;
+		}
 
-		#mask
-			{
-			  width:100vw;
-			  height:100vh;
-			}
-		#lamp
-			{
-			  position:fixed;
-			  top:0px;
-			  left:0px;
-			  width:300px;
-			  height:300px;
-			  border-radius:150px;
-			  border-style:solid;
-			  border-color:white;
-			  
-			  background:inherit;
-			  
-			  box-shadow:1px 1px 12px white;
-			  
-			  background-image:url('<%=@image.img_url%>');
-			  background-size: cover;
-			  background-position:0% 30%;
-			  background-attachment: fixed; 
-			}
+	#mask
+		{
+		  width:100vw;
+		  height:100vh;
+		}
+	#lamp
+		{
+		  position:fixed;
+		  top:0px;
+		  left:0px;
+		  width:300px;
+		  height:300px;
+		  border-radius:150px;
+		  border-style:solid;
+		  border-color:white;
+		  
+		  background:inherit;
+		  
+		  box-shadow:1px 1px 12px white;
+		  
+		  background-image:url('<%=@image.img_url%>');
+		  background-size: cover;
+		  background-position:0% 30%;
+		  background-attachment: fixed; 
+		}
 
-		#coordinates
-			{
-				display: none;
-			}
+	#coordinates{
+			display: none;
+		}
+	#user{
+		display: none;
+	}
 
-	</style>
+</style>
 
 <!-- 	<h1 id="timer">Stop Watch</h1>
  -->	<div id="lamp"></div>
 	<div id="coordinates"><%=@image.xcoordinate%> <%=@image.ycoordinate%></div>
+	<div id="user"><%=@user.id%></div>
+
 
 	<script src="//js.pusher.com/2.2/pusher.min.js" type="text/javascript"></script>
 	

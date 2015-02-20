@@ -33,13 +33,28 @@ $(function(){
 		console.log(event.pageX, event.pageY);
 		var x_coord = $('#coordinates').text().split(" ")[0];
 		var y_coord = $('#coordinates').text().split(" ")[1];
-		if(event.pageX > x_coord - 10 && event.pageX < x_coord + 10 && event.pageY > y_coord - 15 && event.pageY < y_coord + 15){
+		if(event.pageX > x_coord - 20 && event.pageX < x_coord + 20 && event.pageY > y_coord - 20 && event.pageY < y_coord + 20){
 			expand();
 		}
 	});
 
 	function expand(){
-		setInterval(function(){
+		var timesRun = 0
+		var timerId = setInterval(function(){
+
+			timesRun += 1;
+			if(timesRun === 150){
+       			clearInterval(timerId);
+       			console.log("done!")
+       			var user_id = $('#user').text();
+       			var playAgain = confirm("Congratulations! You found Waldo! Would you like to play again?")
+       			if(playAgain===true){
+       				window.location.replace('/users/' + user_id + '/match')
+       			}else{
+       				window.location.replace('/users/' + user_id)
+
+       			}
+    		}
 			new_width = $('#lamp').css('width');
 			new_width = new_width.replace('px','');
 			new_width = parseInt(new_width) + 20;
