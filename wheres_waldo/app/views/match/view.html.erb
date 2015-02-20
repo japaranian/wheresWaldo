@@ -50,31 +50,31 @@
 	<div id="user"><%=@user.id%></div>
 
 
-	<script src="//js.pusher.com/2.2/pusher.min.js" type="text/javascript"></script>
+	// <script src="//js.pusher.com/2.2/pusher.min.js" type="text/javascript"></script>
 	
-	<script type="text/javascript">
+	// <script type="text/javascript">
 
-		// var pusher = new Pusher('413f66a2d19de89f34f2');
-		// var channel = pusher.subscribe('my-channel');
+	// 	var pusher = new Pusher('413f66a2d19de89f34f2');
+	// 	var channel = pusher.subscribe('my-channel');
 		
-		// channel.bind('my-event', function(data) {
-  // 			alert('An event was triggered with message: ' + data.message);
-		// });
+	// 	channel.bind('my-event', function(data) {
+ //  			alert('An event was triggered with message: ' + data.message);
+	// 	});
 
-	Pusher.log = function(message) {
-      if (window.console && window.console.log) {
-        window.console.log(message);
-      }
-    };
+	// Pusher.log = function(message) {
+ //      if (window.console && window.console.log) {
+ //        window.console.log(message);
+ //      }
+ //    };
 
-    var pusher = new Pusher('413f66a2d19de89f34f2');
-    var channel = pusher.subscribe('my-channel');
+ //    var pusher = new Pusher('413f66a2d19de89f34f2');
+ //    var channel = pusher.subscribe('my-channel');
     
-    channel.bind('my_event', function(data) {
-      alert(data.message);
-    });
+ //    channel.bind('my_event', function(data) {
+ //      alert(data.message);
+ //    });
 
-	</script>
+	// </script>
 
 
 
