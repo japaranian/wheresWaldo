@@ -63,12 +63,13 @@ body {
 }
 
 #header{
-	background-color: rgba(247,195,197,0.5);
+	background-color: rgb(227,50,50);
 	height: 70px;
 	font-family: Roboto;
 	font-weight: bold;
 	font-size: 1.5em;
 	margin-bottom: 15px;
+	border: 3px solid rgb(0,0,0);
 }
 
 #header a {
@@ -130,9 +131,3 @@ button:active {
 	margin-left: 10px;
 	width: 100%;
 }
-
-/*#signUpWaldo {
-	clear: both;
-	float: right;
-	border: 1px solid black;
-}*/

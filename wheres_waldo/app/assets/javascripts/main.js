@@ -47,6 +47,12 @@ $(function(){
        			clearInterval(timerId);
        			console.log("done!")
        			var user_id = $('#user').text();
+       			// var $div = $('#confirm');
+       			// var $p = "<p>Congratulations! You found Waldo! Would you like to play again?</p>"
+       			// $div.append($p);
+       			// var $yesButton = "<button>Yeah!</button>";
+       			// var $noButton = "<button>Nah, I'm good</button>";
+       			// $div.append($yesButton, $noButton);
        			var playAgain = confirm("Congratulations! You found Waldo! Would you like to play again?")
        			if(playAgain===true){
        				window.location.replace('/users/' + user_id + '/match')
