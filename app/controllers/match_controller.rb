@@ -16,7 +16,8 @@ class MatchController < ApplicationController
 	end
 
 	def create
-		image = Image.find_by(level: params["level"])
+		image_level = Image.where(level: params["level"]) # will return array of all images with level
+		image = image_level.sample #returns random image from array above
 		match = Match.new(player_one: session[:user_id], level: params["level"], image_id: image.id)
 		match.save
 

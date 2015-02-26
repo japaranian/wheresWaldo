@@ -1,20 +1,18 @@
 <style>
-	body
-		{
+	body {
 		  padding:0px;
 		  margin:0px;
 
 		  cursor:crosshair;
 		  background-color: black;
-		}
+	}
 
-	#mask
-		{
+	#mask {
 		  width:100vw;
 		  height:100vh;
-		}
-	#lamp
-		{
+	}
+
+	#lamp {
 		  position:fixed;
 		  top:0px;
 		  left:0px;
@@ -32,15 +30,15 @@
 		  background-size: cover;
 		  background-position:0% 30%;
 		  background-attachment: fixed; 
-		}
+	}
 
 	#coordinates{
 			display: none;
-		}
+	}
+
 	#user{
 		display: none;
 	}
-
 </style>
 
 <!-- 	<h1 id="timer">Stop Watch</h1>
@@ -49,6 +47,11 @@
 	<div id="coordinates"><%=@image.xcoordinate%> <%=@image.ycoordinate%></div>
 	<div id="user"><%=@user.id%></div>
 
+	<script>
+		$( document ).on( "mousemove", function( event ) {
+			$( "#log" ).text( "pageX: " + event.pageX + ", pageY: " + event.pageY );
+		});
+	</script>
 
 	// <script src="//js.pusher.com/2.2/pusher.min.js" type="text/javascript"></script>
 	
