@@ -22,7 +22,7 @@ $(function(){
 		blah_height = (parseInt($('#lamp').css('height'))/2);
 
 		pageX = event.pageX - blah_width;
-		pageY = event.pageY- blah_height;
+		pageY = event.pageY - blah_height;
 		$('#lamp').css('left',pageX);
 		$('#lamp').css('top',pageY);
 		});
@@ -35,7 +35,14 @@ $(function(){
 		var y_coord = $('#coordinates').text().split(" ")[1];
 		if(event.pageX > x_coord - 20 && event.pageX < x_coord + 20 && event.pageY > y_coord - 20 && event.pageY < y_coord + 20){
 			expand();
+			var timestamp = $.now();
+			time = new Date( timestamp );
+			console.log(time);
 		}
+	});
+
+	$('#hintButton').on('click', function(){
+		$(this).toggleClass("on").text("Hint On");
 	});
 
 	function expand(){

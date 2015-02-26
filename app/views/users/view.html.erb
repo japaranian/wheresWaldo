@@ -34,6 +34,11 @@
 	<h2><a href="/users/<%=user.id%>/match">Play</a></h2>
 
 	<h3>Player Record</h3>
+	<% @matches.each do |match| %>
+	<ul>
+		<li>Level: <%= match.level %></li>
+	</ul>
+	<% end %>
 
 
 	</div>

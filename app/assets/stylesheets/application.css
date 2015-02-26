@@ -131,3 +131,15 @@ button:active {
 	margin-left: 10px;
 	width: 100%;
 }
+
+#text {
+	width: 30%;
+}
+
+button.on {
+	background-color: #FF0000;
+}
+
+button.off {
+	background-color: #ffffff
+}
