@@ -29,6 +29,7 @@ $(function(){
 	});
 
 	$('#lamp').on("click", function(){
+		debugger
 		console.log("you clicked!");
 		console.log(event.pageX, event.pageY);
 		var x_coord = $('#coordinates').text().split(" ")[0];
@@ -37,9 +38,20 @@ $(function(){
 			expand();
 			var timestamp = $.now();
 			time = new Date( timestamp );
-			console.log(time);
+			console.log(id, time); // need to get match id for PUT
 		}
 	});
+
+	// PUT match, need id
+	function updateTime(id, attr){
+		$.ajax({
+			url: 'users/' + id + '/match/' + id,
+			type: 'POST',
+			data: attr
+		}).done(function(data){
+			console.log(data);
+		});
+	}
 
 	$('#hintButton').on('click', function(){
 		$(this).toggleClass("on").text("Hint On");
