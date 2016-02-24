@@ -1,7 +1,7 @@
 # Where's Waldo?
 ## An interactive twist to my beloved childhood game
 
-###[See it on Heroku](https://infinite-spire-3805.herokuapp.com/)
+COMING SOON
 
 ## Technologies Used
 
